@@ -2,7 +2,21 @@
 import unittest
 
 def find_it(seq):
-    return 5
+    dict = {}
+    for n in seq:
+        if n in dict:
+            dict[n] += 1
+        else:
+            dict[n] = 1
+    for key in dict:
+        if (dict[key] % 2 != 0):
+            return key
+
+# best
+# def find_it(seq):
+#     for i in seq:
+#         if seq.count(i)%2!=0:
+#             return i
 
 class test(unittest.TestCase):
     def tests(self):
