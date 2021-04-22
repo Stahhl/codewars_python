@@ -5,6 +5,11 @@ def high_and_low(numbers):
     arr = list(map(int, numbers.split(" ")))
     return f"{max(arr)} {min(arr)}"
 
+# best
+# def high_and_low(numbers): #z.
+#     nn = [int(s) for s in numbers.split(" ")]
+#     return "%i %i" % (max(nn),min(nn))
+
 class test(unittest.TestCase):
     def tests(self):
         self.assertEqual(high_and_low("4 5 29 54 4 0 -214 542 -64 1 -3 6 -6"), "542 -214");
